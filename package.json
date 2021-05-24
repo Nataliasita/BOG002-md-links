@@ -1,4 +1,34 @@
 {
-  "name": "md-links",
-  "version": "0.1.0"
+  "name": "markdown-validate-your-links",
+  "version": "0.1.0",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "node.js": "0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "description": "leer y validar los links de tus archivos .md",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nataliasita/BOG002-md-links.git"
+  },
+  "keywords": [
+    "mdlinks",
+    "npm",
+    "link-validation",
+    "link"
+  ],
+  "author": "Natalia Gonzalez Lizarazo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nataliasita/BOG002-md-links/issues"
+  },
+  "homepage": "https://github.com/Nataliasita/BOG002-md-links#readme"
 }
