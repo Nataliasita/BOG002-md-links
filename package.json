@@ -1,26 +1,31 @@
 {
-  "name": "markdown-validate-links",
+  "name": "md-links",
   "version": "0.1.0",
   "dependencies": {
+    "arg": "^5.0.0",
     "axios": "^0.21.1",
+    "chalk": "^4.1.1",
     "colors": "^1.4.0",
     "dom": "0.0.3",
-    "express": "^4.17.1",
     "i": "^0.3.6",
+    "inquirer": "^8.1.1",
     "js": "^0.1.0",
     "jsdom": "^16.6.0",
-    "marked": "^2.0.5",
+    "marked": "^2.1.3",
+    "ncp": "^2.0.0",
     "node-fetch": "^2.6.1",
     "node.js": "0.0.1-security",
     "path": "^0.12.7",
     "save-dev": "0.0.1-security"
   },
   "description": "leer y validar los links de tus archivos .md",
-  "main": "index.js",
+  "main": "cli.js",
   "directories": {
     "test": "test"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "md-links": "^0.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,7 +34,7 @@
     "url": "git+https://github.com/Nataliasita/BOG002-md-links.git"
   },
   "keywords": [
-    "mdlinks",
+    "md-links",
     "md",
     "link-validation",
     "library"
@@ -37,7 +42,10 @@
   "author": "Natalia Gonzalez Lizarazo",
   "license": "ISC",
   "bin": {
-    "md-links": "./function.js"
+    "md-links": "cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "bugs": {
     "url": "https://github.com/Nataliasita/BOG002-md-links/issues"
