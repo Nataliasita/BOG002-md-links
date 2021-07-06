@@ -1,0 +1,56 @@
+
+function md_links (route){
+    let promise_read;
+    let dataLinks = [];
+    promise_read = new Promise ((resolve,reject) => {
+    fs.readFile(route,'utf8',(err, data) => {
+    if(err) throw err;
+    if (path.extname(route).toLowerCase() === '.md') {
+        let currentDirectory = process.cwd();
+        
+        const htmlData = marked(data);
+        const dom = new jsdom.JSDOM(htmlData);
+        const anwersLink = dom.window.document.querySelectorAll("a");
+        anwersLink.forEach((element, response) => {
+            if (element.href.includes("http")) {
+              dataLinks.push({
+                href: element.href,
+                text: element.textContent,
+                file: currentDirectory,
+                status:response.status,
+                ok:response.statusText,
+              });
+            } 
+            if (dataLinks.validate === '--validate') {
+                fetch(`${element.href}`).then((response) => {
+                  console.log('Ubicacion:' + response.link.red,response.status,response.statusText);
+                }).catch((err) => {
+                  console.error('No se encuentran links' + err);
+                });
+              } else {
+                console.log('Link:'+ element.href.cyan,)
+                console.log('Texto:' + element.text.white,);
+                console.log('File:' + currentDirectory.yellow,)
+                console.log('Status:' + response.status)
+                console.log('ok: ' + response.statusText)
+                console.log("")
+              }
+    })
+    } 
+//    let resultado = console.log(dataLinks)
+//    resultado;
+//resolve(data);
+});
+});
+return promise_read;
+}
+
+md_links('README.md').then((data)=> {
+console.log(data)   
+})
+
+console.log('esto se ejecuta antes que esté el archivo');
+
+module.exports = md_links;
+
+

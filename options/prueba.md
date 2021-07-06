@@ -1,0 +1,1 @@
+https://www.cardcaptorsakurafans.com/sakura-cardcaptor-latino-episodios-1-70/ 

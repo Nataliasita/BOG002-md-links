@@ -7,6 +7,7 @@
     "chalk": "^4.1.1",
     "colors": "^1.4.0",
     "dom": "0.0.3",
+    "fetch": "^1.1.0",
     "i": "^0.3.6",
     "inquirer": "^8.1.1",
     "js": "^0.1.0",
@@ -16,7 +17,8 @@
     "node-fetch": "^2.6.1",
     "node.js": "0.0.1-security",
     "path": "^0.12.7",
-    "save-dev": "0.0.1-security"
+    "save-dev": "0.0.1-security",
+    "yargs": "^17.0.1"
   },
   "description": "leer y validar los links de tus archivos .md",
   "main": "cli.js",
